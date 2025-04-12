@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Virtual Business Card</title>
+    <link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --mainpurple: #6008ac;
+            --lightpurple: #b084cc;
+            --yellowalt: #edbd2d;
+            --lightyellow: #f8e09a;
+            --mainwhite: #f4f4f9;
+            --mainblack: #000000;
+            --maingrey: #ccc;
+            --grey: #333030;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--mainwhite);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        .card-image {
+            flex: 1;
+            max-width: 300px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .card-content {
+            flex: 2;
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content h1 {
+            font-size: 2rem;
+            margin: 0 0 10px;
+            color: var(--mainpurple);
+            font-family: 'Tw Cen MT Std', sans-serif;
+        }
+
+        .card-content h2 {
+            font-size: 1.2rem;
+            color: var(--grey);
+            margin-bottom: 20px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: var(--mainblack);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .social-links a {
+            background-color: var(--lightpurple);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--mainpurple);
+            transform: scale(1.05);
+        }
+
+        .social-links img {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .card-image {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                padding: 20px 0 0;
+            }
+
+            .card-image img {
+                width: 60%;
+                max-width: 250px;
+                height: auto;
+                border-radius: 12px;
+                margin: 0 auto;
+            }
+
+            .card-content {
+                padding: 20px;
+                align-items: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-image">
+        <img src="/PROFILE%20PICTURE.jpg" alt="Picture of Tommy Hills">
+    </div>
+    <div class="card-content">
+        <h1>Tommy Hills</h1>
+        <h2>Performer / Comedian / Educator</h2>
+        <p>
+            Tommy is a passionate STEM communicator and experimentalist based in Milton Keynes, currently balancing roles as an MSc by Research student at the University of Kent, a Computing teacher with Teach First, and a PowerPoint comedian. Blending a love of stand-up comedy with work in artificial intelligence, Tommy delivers engaging talks that highlight the creativity within Computing. His mission is to inspire others by showing how AI, Mathematics, and Computer Science connect to everyday life beyond the classroom.
+        </p>
+        <div class="social-links">
+            <a href="mailto:tommy.hills@thetommyverse.com"><i class="fas fa-envelope"></i>Email</a>
+            <a href="https://instagram.com/thetommyverse" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://www.threads.net/thetommyverse" target="_blank"><i class="fab fa-threads"></i>Threads</a>
+            <a hre
